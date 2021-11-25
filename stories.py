@@ -37,11 +37,21 @@ class Story:
 
 # Here's a story to get you started
 
-
+stories = {'story1':'Way back in {place}, there lived a silly {adjective} {noun}. It would always {verb} {plural_noun}.', 'story2':'Once upon a time in a long-ago {place}, there lived a large {adjective} {noun}. It loved to {verb} {plural_noun}.', 'story3':"In west {place}, there resided a chill {adjective} {noun}. It never didn't {verb} {plural_noun}."}
 story = Story(
     ["place", "noun", "verb", "adjective", "plural_noun"],
-    """Once upon a time in a long-ago {place}, there lived a
-       large {adjective} {noun}. It loved to {verb} {plural_noun}."""
+    stories['story1']
 )
-ans = {'place':'Park City','noun':'A snowman', 'verb':'discharge', 'adjective':'scrumptious','plural_noun':'rocks'}
-print(story.generate(ans))
+
+
+story2 = Story(
+    ["place", "noun", "verb", "adjective", "plural_noun"],
+    stories['story2']
+)
+
+story3 = Story(
+    ["place", "noun", "verb", "adjective", "plural_noun"],
+    stories['story3']
+)
+
+stories = {'story1':story, 'story2':story2, 'story3':story3}
